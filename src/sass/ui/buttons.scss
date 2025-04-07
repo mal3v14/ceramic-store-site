@@ -1,3 +1,4 @@
+@use "/src/sass/base/variables.scss" as v;
 @use "/src/sass/base/mixins.scss" as m;
 
 .btn-default {
@@ -5,4 +6,28 @@
     width: 230px;
     height: 50px;
     font-size: 20px;
+}
+
+@media screen and (min-width:1200px) {
+    .btn-default {
+        &:hover {
+            background-color: v.$dark;
+            color: v.$light;
+            transition: 0.5s;
+        }
+
+        &:active {
+            box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.4);
+            background: rgba(217, 217, 217, 0.1);
+            color: v.$dark;
+            border: none;
+        }
+    }
+}
+
+@media screen and (min-width:1920px) {
+    .btn-default {
+        width: 330px;
+        height: 60px;
+    }
 }
