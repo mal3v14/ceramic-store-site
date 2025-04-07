@@ -1,0 +1,8 @@
+@use "/src/sass/base/mixins.scss" as m;
+
+.btn-default {
+    @include m.button;
+    width: 230px;
+    height: 50px;
+    font-size: 20px;
+}
