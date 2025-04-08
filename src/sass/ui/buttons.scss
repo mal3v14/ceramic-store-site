@@ -6,6 +6,20 @@
     width: 230px;
     height: 50px;
     font-size: 20px;
+
+    &:hover {
+        background-color: v.$dark;
+        color: v.$light;
+        transition: 0.5s;
+    }
+
+    &:active {
+        box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.4);
+        background: rgba(217, 217, 217, 0.1);
+        color: v.$dark;
+        border: none;
+        transition: 0.5s;
+    }
 }
 
 .btn-send {
@@ -14,48 +28,41 @@
     height: 40px;
     font-size: 16px;
 
+    &:hover {
+        color: v.$Ceramic;
+        border: 1px solid v.$Ceramic;
+        transition: 0.5s;
+    }
+
     &:focus {
+        color: v.$dark;
         outline: 1px solid v.$Ceramic;
         border: 1px solid v.$Ceramic;
+        transition: 0.5s;
+    }
+
+    &:active {
+        color: v.$dark;
+        outline: 1px solid v.$Ceramic;
+        border: 1px solid v.$Ceramic;
+        transition: 0.5s;
+    }
+
+
+
+    &:disabled {
+        border: 1px solid v.$ui-disabled;
+        color: v.$ui-disabled;
+        transition: 0.5s;
     }
 
 }
 
-@media screen and (min-width:1200px) {
-    .btn-default {
-        &:hover {
-            background-color: v.$dark;
-            color: v.$light;
-            transition: 0.5s;
-        }
+// @media screen and (min-width:1200px) {
+//     .btn-default {}
 
-        &:active {
-            box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.4);
-            background: rgba(217, 217, 217, 0.1);
-            color: v.$dark;
-            border: none;
-        }
-    }
-
-    .btn-send {
-
-        &:active {
-            outline: 1px solid v.$Ceramic;
-            border: 1px solid v.$Ceramic;
-        }
-
-        &:hover {
-            color: v.$Ceramic;
-            border: 1px solid v.$Ceramic;
-        }
-
-        &:disabled {
-            border: 1px solid v.$ui-disabled;
-            color: v.$ui-disabled;
-        }
-
-    }
-}
+//     .btn-send {}
+// }
 
 @media screen and (min-width:1920px) {
     .btn-default {

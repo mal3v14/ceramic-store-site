@@ -17,7 +17,8 @@
     }
 
     &__form {
-        width: 340px;
+        position: relative;
+        width: 100%;
         height: 428px;
     }
 
@@ -45,7 +46,6 @@
         border-radius: 2px;
         padding: 10px 15px;
         color: v.$dark;
-        width: 100%;
         height: 48px;
         background: #fff;
 
@@ -67,7 +67,6 @@
         border-radius: 2px;
         padding: 10px 15px;
         color: v.$dark;
-        width: 100%;
         height: 132px;
         background: #fff;
         resize: none;
@@ -105,25 +104,45 @@
     &__btn {
         margin-top: 20px;
     }
+
+    &__vase {
+        display: none;
+        position: absolute;
+    }
 }
 
 @media screen and (min-width:768px) {
-
     .git {
 
         &__form {
             width: 696px;
             height: 428px;
+
         }
 
         &__wrapper {
             margin-top: 45px;
         }
+
+        &__input {
+            width: 47%;
+        }
+
+        &__textarea {
+            width: 47%;
+            height: 132px;
+        }
+
+        &__vase {
+            display: block;
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+        }
     }
 }
 
 @media screen and (min-width:1200px) {
-
     .git {
 
         &__1col {
@@ -146,11 +165,11 @@
 
         &__input {
 
-            &:hover {
-                border: none;
-                outline: 1px solid v.$dark;
+            // &:hover {
+            //     border: none;
+            //     outline: 1px solid v.$dark;
 
-            }
+            // }
         }
     }
 }
@@ -168,7 +187,9 @@
             width: 645px;
             height: 356px;
         }
+
+        &__2col {
+            padding-left: 147px;
+        }
     }
-
-
 }
