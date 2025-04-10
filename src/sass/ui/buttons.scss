@@ -48,14 +48,26 @@
         transition: 0.5s;
     }
 
-
-
     &:disabled {
         border: 1px solid v.$ui-disabled;
         color: v.$ui-disabled;
         transition: 0.5s;
     }
 
+}
+
+.btn-submit {
+    @include m.button;
+    width: 90px;
+    height: 40px;
+    font-size: 16px;
+    color: v.$light;
+    border: 1px solid v.$light;
+
+    &:disabled {
+        color: v.$ui-disabled;
+        border: 1px solid v.$ui-disabled;
+    }
 }
 
 // @media screen and (min-width:1200px) {

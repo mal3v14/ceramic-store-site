@@ -15,6 +15,10 @@
         display: none;
     }
 
+    &__wrapper {
+        position: relative;
+    }
+
     .swiper-pagination {
         padding-bottom: 0;
         bottom: -35px;
@@ -55,9 +59,7 @@
 @media screen and (min-width: 1200px) {
     .works {
 
-        &__wrapper {
-            position: relative;
-        }
+
 
         &__slider {
             margin: 80px 40px 0 40px;

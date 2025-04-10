@@ -1,0 +1,129 @@
+@use "/src/sass/base/variables.scss" as v;
+
+.footer {
+    padding: 50px 0;
+    background-color: v.$dark;
+    color: v.$light;
+
+    &_spaced {
+        margin-top: 113px;
+    }
+
+    &__header {
+        font-weight: 500;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        margin-top: 40px;
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    &__form {
+        margin-top: 40px;
+
+    }
+
+    &__input {
+        display: block;
+        font-weight: 400;
+        font-size: 14px;
+        color: v.$ui-active;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid v.$ui-active;
+        padding-bottom: 15px;
+        width: 293px;
+        height: 32px;
+
+        &::placeholder {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            color: v.$ui-active;
+        }
+
+        &:focus {
+            outline: none;
+            border: none;
+            border-bottom: 1px solid v.$ui-active;
+
+        }
+
+        &:invalid {
+            outline: none;
+            border: none;
+            border-bottom: 1px solid v.$ui-error;
+        }
+    }
+
+    &__check-block {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 200%;
+
+        a {
+            margin-left: 3px;
+            color: #A22DC6;
+            text-decoration: none;
+        }
+
+
+    }
+
+    &__checkbox {
+        border: 1px solid v.$light;
+        border-radius: 2px;
+        width: 15px;
+        height: 15px;
+        background-color: transparent;
+        margin-right: 5px;
+    }
+
+    &__form-btn {
+        margin-top: 20px;
+    }
+
+    // Links section
+
+    &__links {
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 66px;
+    }
+
+    &__links-block {
+        padding-bottom: 40px;
+    }
+
+    &__nav {
+        margin-top: 40px;
+        display: flex;
+
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            column-gap: 66px;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            padding: 0;
+
+            a {
+                text-decoration: none;
+                color: v.$light;
+                font-weight: 400;
+                font-size: 16px;
+            }
+        }
+
+    }
+}

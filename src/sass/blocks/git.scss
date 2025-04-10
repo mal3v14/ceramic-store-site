@@ -59,6 +59,11 @@
             color: v.$ui-disabled;
             font-size: 14px;
         }
+
+        &:invalid {
+            outline: none;
+            border: 1px solid v.$ui-error;
+        }
     }
 
     &__textarea {
@@ -80,6 +85,11 @@
         &::placeholder {
             color: v.$ui-disabled;
             font-size: 14px;
+        }
+
+        &:invalid {
+            outline: none;
+            border: 1px solid v.$ui-error;
         }
     }
 

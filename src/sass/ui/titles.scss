@@ -17,6 +17,14 @@
     font-size: 20px;
 }
 
+.title-h3-white {
+    @include m.title;
+    font-size: 20px;
+    color: v.$light;
+}
+
+
+
 @media screen and (min-width:768px) {
     .title-h2 {
         font-size: 36px;
