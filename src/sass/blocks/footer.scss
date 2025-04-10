@@ -1,7 +1,7 @@
 @use "/src/sass/base/variables.scss" as v;
 
 .footer {
-    padding: 50px 0;
+    padding: 50px 0 0 0;
     background-color: v.$dark;
     color: v.$light;
 
@@ -129,7 +129,6 @@
 
     &__social-block {
 
-
         ul {
 
             margin-top: 40px;
@@ -162,9 +161,55 @@
         display: flex;
         justify-content: center;
         margin: 40px auto 0 auto;
+        padding-bottom: 50px;
         font-weight: 400;
         font-size: 14px;
         color: v.$light;
 
     }
+}
+
+@media screen and (min-width: 768px) {
+    .footer {
+        &__wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+        }
+
+        &__newsletter {
+            width: 100%;
+        }
+
+        &__social {
+            margin-top: 40px;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .footer {
+        &__newsletter {
+            width: 293px;
+        }
+
+        &__copyright {
+            margin-top: 50px;
+
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .footer {
+        padding: 80px 0 0 0;
+
+        &__copyright {
+            margin-top: 18px;
+
+        }
+    }
+
+
 }
