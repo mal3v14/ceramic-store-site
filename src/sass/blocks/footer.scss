@@ -126,4 +126,45 @@
         }
 
     }
+
+    &__social-block {
+
+
+        ul {
+
+            margin-top: 40px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            column-gap: 10px;
+            padding: 0;
+
+            a {
+                width: 24px;
+                height: 24px;
+                color: v.$light;
+                text-decoration: none;
+                font-size: 24px;
+
+            }
+
+            span {
+                &::before {
+                    margin-left: 0;
+                }
+
+            }
+        }
+    }
+
+    &__copyright {
+        display: flex;
+        justify-content: center;
+        margin: 40px auto 0 auto;
+        font-weight: 400;
+        font-size: 14px;
+        color: v.$light;
+
+    }
 }
