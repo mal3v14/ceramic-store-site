@@ -6,6 +6,7 @@
 
 
 @use "/src/sass/blocks/header.scss";
+@use "/src/sass/blocks/footer.scss";
 
 @use "/src/sass/ui/titles.scss";
 @use "/src/sass/ui/buttons.scss";
@@ -14,4 +15,4 @@
 @use "/src/sass/blocks/activities.scss";
 @use "/src/sass/blocks/git.scss";
 @use "/src/sass/blocks/works.scss";
-@use "/src/sass/blocks/footer.scss";
+@use "/src/sass/blocks/catalog.scss";

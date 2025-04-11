@@ -1,0 +1,119 @@
+@use "/src/sass/base/variables.scss" as v;
+
+.catalog {
+    padding-top: 50px;
+
+    &__title {
+        margin-top: 60px;
+    }
+
+    &__tabs {
+        display: flex;
+        column-gap: 50px;
+        row-gap: 50px;
+        flex-wrap: wrap;
+        margin-top: 60px;
+        padding: 13px 25px;
+        border: 1px solid v.$dark;
+    }
+
+    &__tab {
+        position: relative;
+        border: none;
+        background: none;
+        padding: 0;
+        font-weight: 500;
+        font-size: 20px;
+        text-transform: uppercase;
+        color: #000;
+
+        &_active::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background-color: #000;
+            bottom: -1px;
+
+        }
+    }
+
+
+
+    &__content-item {
+        position: relative;
+        margin-top: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        column-gap: 20px;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__decoration {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        display: none;
+        border-top: 1px solid v.$dark;
+        border-left: 1px solid v.$dark;
+        background-color: transparent;
+        top: -10px;
+        left: -10px;
+    }
+
+    &__card {
+
+        padding-bottom: 16px;
+        border: 1px solid v.$dark;
+        width: 340px;
+        height: 275px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    &__img {
+        width: 340px;
+        height: 198px;
+        object-fit: cover;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    &__product,
+    &__product-price {
+        padding: 0 12px;
+        margin-top: 11px;
+        font-weight: 500;
+        font-size: 16px;
+        color: #000;
+    }
+
+    &__product-price {
+        margin-top: 8px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .catalog {
+        &__content-item {
+            margin-top: 70px;
+
+        }
+
+        &__decoration {
+            display: block;
+        }
+
+        &__tabs {
+            width: 460px;
+        }
+    }
+
+}
+
+@media screen and (min-width: 1920px) {
+    .footer__catalog {
+        margin-top: 100px;
+    }
+}
