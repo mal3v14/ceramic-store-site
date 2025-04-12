@@ -70,6 +70,33 @@
     }
 }
 
+.btn-read {
+    @include m.button;
+    width: 145px;
+    height: 32px;
+    font-size: 14px;
+
+    &:focus {
+        color: v.$dark;
+        outline: 1px solid v.$Ceramic;
+        border: 1px solid v.$Ceramic;
+        transition: 0.5s;
+    }
+
+    &:active {
+        color: v.$dark;
+        outline: 1px solid v.$Ceramic;
+        border: 1px solid v.$Ceramic;
+        transition: 0.5s;
+    }
+
+    &:hover {
+        color: v.$Ceramic;
+        border: 1px solid v.$Ceramic;
+        transition: 0.5s;
+    }
+}
+
 // @media screen and (min-width:1200px) {
 //     .btn-default {}
 

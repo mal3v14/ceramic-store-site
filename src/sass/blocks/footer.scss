@@ -6,7 +6,11 @@
     color: v.$light;
 
     &_spaced {
-        margin-top: 113px;
+        margin-top: 60px;
+
+        &-mainpage {
+            margin-top: 113px
+        }
     }
 
     &__catalog {
@@ -57,11 +61,11 @@
 
         }
 
-        &:invalid {
-            outline: none;
-            border: none;
-            border-bottom: 1px solid v.$ui-error;
-        }
+        // &:invalid {
+        //     outline: none;
+        //     border: none;
+        //     border-bottom: 1px solid v.$ui-error;
+        // }
     }
 
     &__check-block {
