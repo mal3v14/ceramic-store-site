@@ -1,15 +1,19 @@
 @use "/src/sass/base/variables.scss" as v;
 
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 .git {
     margin-top: 60px;
 
-    &__1col {
-        display: none;
-    }
+
 
     &__img {
         box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
-
+        display: none;
     }
 
     &__wrapper {
@@ -134,7 +138,7 @@
     .git {
 
         &__form {
-            display: block;
+            display: flex;
             width: 696px;
             // height: 428px;
 
@@ -166,22 +170,29 @@
 @media screen and (min-width:1200px) {
     .git {
 
-        &__1col {
-            display: block;
-        }
-
-        &__img {
+        &__1col,
+        &__2col {
             width: 550px;
-            height: 341px;
-        }
-
-        &__wrapper {
-            margin-top: 80px;
         }
 
         &__form {
-            width: 550px;
-            // height: 428px;
+            max-width: 550px;
+            width: 100%;
+            align-items: flex-start;
+        }
+
+
+
+        &__img {
+            display: block;
+            max-width: 550px;
+            height: auto;
+        }
+
+        &__wrapper {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 80px;
         }
 
         &__input {
@@ -209,8 +220,19 @@
             // height: 356px;
         }
 
-        &__2col {
-            padding-left: 147px;
+        &__fieldset {
+            gap: 45px;
+            display: flex;
+            justify-content: space-between;
         }
+
+        &__2col {
+            width: 645px;
+            margin-right: 75px;
+        }
+
+        // &__2col {
+        //     padding-left: 147px;
+        // }
     }
 }
