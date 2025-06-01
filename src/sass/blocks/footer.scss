@@ -5,6 +5,24 @@
     background-color: v.$dark;
     color: v.$light;
 
+    .just-validate-error-field {
+        border-bottom: 1px solid v.$ui-error;
+
+        &:focus {
+            border-bottom: 1px solid v.$ui-error;
+
+        }
+
+        &:hover {
+            border-bottom: 1px solid v.$ui-error;
+        }
+    }
+
+    .just-validate-error-field::placeholder {
+        color: v.$ui-error
+    }
+
+
     &_spaced {
         margin-top: 60px;
 
@@ -52,6 +70,8 @@
             font-weight: 400;
             line-height: normal;
             color: v.$ui-active;
+
+
         }
 
         &:focus {

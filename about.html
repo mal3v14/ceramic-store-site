@@ -116,6 +116,7 @@
                             <input class="git__checkbox" type="checkbox" id="checkbox">
                             I agree with the <a href="#">terms</a>
                         </label>
+                        <div class="checkbox-error-message"></div>
                         <button class="btn-send git__btn">send request</button>
                         <img src="/src/img/form/vase.png" alt="vase" class="git__vase">
                     </form>
@@ -144,10 +145,12 @@
                     <div class="footer__text">Keep up to date with news and promotions</div>
                     <form action="#" class="footer__form">
                         <input type="email" class="footer__input" placeholder="Enter your e-mail" required>
+                        <div class="error-message"></div>
                         <label class="footer__check-block" for="footer__checkbox">
                             <input type="checkbox" class="footer__checkbox" required id="footer__checkbox">
                             I agree with the <a href="#">terms</a>
                         </label>
+                        <div class="checkbox-error-message"></div>
                         <button class="btn-submit footer__form-btn">submit</button>
                     </form>
                 </div>
@@ -200,8 +203,6 @@
     </footer>
 
     <script type="module" src="/src/js/script.js"></script>
-
-
 
 </body>
 

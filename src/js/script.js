@@ -1,5 +1,6 @@
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
+import JustValidate from 'just-validate';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -76,3 +77,90 @@ try {
 
 // Обратите внимание, что значение block (в двух местах) можно спокойно поменять на flex, если вам это необходимо
 
+try {
+    const mainFormValidator = new JustValidate('form');
+    mainFormValidator.addField('#name', [
+        {
+            rule: 'required',
+            errorMessage: 'Please fill the name'
+        },
+        {
+            rule: 'minLength',
+            value: 2,
+            errorMessage: 'Please type at least 2 letters'
+        },
+
+    ])
+        .addField('#email', [
+            {
+                rule: 'required',
+            },
+            {
+                rule: 'email',
+                errorMessage: 'Please type your email'
+            },
+
+        ])
+        .addField('#question', [
+            {
+                rule: 'required',
+            },
+            {
+                rule: 'minLength',
+                value: 5,
+            },
+
+        ], {
+            errorsContainer: document
+                .querySelector('#question')
+                .parentElement.querySelector('.error-message'),
+        })
+        .addField('#checkbox', [
+            {
+                rule: 'required',
+            },
+
+        ],
+            {
+                errorsContainer: document
+                    .querySelector('#checkbox')
+                    .parentElement.parentElement.querySelector('.checkbox-error-message'),
+            }
+        )
+}
+catch (e) {
+
+}
+
+try {
+    const footerFormValidator = new JustValidate('.footer__form');
+    footerFormValidator.addField('.footer__input', [
+        {
+            rule: 'required',
+        },
+        {
+            rule: 'email',
+            errorMessage: 'Please type your email'
+        },
+    ], {
+        errorsContainer: document
+            .querySelector('.footer__input')
+            .parentElement.querySelector('.error-message'),
+    }
+    )
+        .addField('.footer__checkbox', [
+            {
+                rule: 'required',
+            }
+
+        ],
+            {
+                errorsContainer: document
+                    .querySelector('.footer__checkbox ')
+                    .parentElement.parentElement.querySelector('.checkbox-error-message'),
+            })
+}
+
+catch (e) {
+
+}

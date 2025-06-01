@@ -9,6 +9,22 @@
 .git {
     margin-top: 60px;
 
+    .just-validate-error-field {
+        border: none;
+        outline: 1px solid v.$ui-error;
+
+        &:focus {
+            border: none;
+            outline: 1px solid v.$ui-error;
+
+        }
+
+        &:hover {
+            border: none;
+            outline: 1px solid v.$ui-error;
+        }
+
+    }
 
 
     &__img {
@@ -114,6 +130,11 @@
             text-decoration: none;
             margin-left: 3px;
         }
+    }
+
+    .git__checkbox.just-validate-error-field {
+        border: none;
+        outline: 1px solid v.$dark;
     }
 
     &__checkbox {
