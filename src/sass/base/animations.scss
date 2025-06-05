@@ -1,0 +1,12 @@
+@use "/src/sass/base/variables.scss" as v;
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(100%);
+    }
+
+
+    100% {
+        transform: translateX(0%);
+    }
+}

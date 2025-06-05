@@ -127,6 +127,20 @@ try {
                     .parentElement.parentElement.querySelector('.checkbox-error-message'),
             }
         )
+        .onSuccess((event) => {
+            const form = event.currentTarget;
+            const formData = new FormData(form);
+
+            fetch('https://httpbin.org/post', {
+                method: "POST",
+                body: formData,
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log('success', data);
+                    form.reset();
+                });
+        });
 }
 catch (e) {
 
@@ -159,6 +173,20 @@ try {
                     .querySelector('.footer__checkbox ')
                     .parentElement.parentElement.querySelector('.checkbox-error-message'),
             })
+        .onSuccess((event) => {
+            const footerForm = event.currentTarget;
+            const footerFormData = new FormData(footerForm);
+
+            fetch('https://httpbin.org/post', {
+                method: "POST",
+                body: footerForm,
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log('success', data);
+                    footerForm.reset();
+                });
+        });
 }
 
 catch (e) {
