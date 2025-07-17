@@ -22,37 +22,44 @@ close.addEventListener("click", () => {
     document.body.style.overflow = "";
 });
 
-try {
-    // init Swiper:
-    // const swiper = 
-    new Swiper('.works__slider', {
-        slidesPerView: 1,
-        loop: true,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        navigation: {
-            nextEl: ".icon-right-open",
-            prevEl: ".icon-left-open",
-        },
-        breakpoints: {
-            // when window width is >= 1200px
-            1200: {
-                slidesPerView: 3,
-                spaceBetween: 5,
-                keyboard: true,
-            },
-            1920: {
-                spaceBetween: 35,
-            },
 
-        },
 
-        modules: [Navigation, Pagination]
+// 
+document.addEventListener('DOMContentLoaded', () => {
+    let swiper = null;
+
+    const initSwiper = () => {
+        swiper = new Swiper('.works__slider', {
+            slidesPerView: window.innerWidth >= 1200 ? 3 : 1,
+            spaceBetween: window.innerWidth >= 1200 ? 5 : 0,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".icon-right-open",
+                prevEl: ".icon-left-open",
+            },
+            observer: true,
+            observeParents: true,
+            modules: [Navigation, Pagination],
+        });
+    };
+
+    initSwiper();
+
+    window.addEventListener('resize', () => {
+        const shouldBe3 = window.innerWidth >= 1200;
+        if ((shouldBe3 && swiper.params.slidesPerView !== 3) ||
+            (!shouldBe3 && swiper.params.slidesPerView !== 1)) {
+            swiper.destroy(true, true);
+            initSwiper();
+        }
     });
+});
 
-} catch (e) { };
+
 
 
 try {
